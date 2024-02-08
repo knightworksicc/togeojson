@@ -1,4 +1,8 @@
-var toGeoJSON = (function() {
+import xmldom from '@xmldom/xmldom';
+
+const XMLSerializer = xmldom.XMLSerializer;
+
+const toGeoJSON = (function() {
     'use strict';
 
     var removeSpace = /\s*/g,
@@ -456,4 +460,6 @@ var toGeoJSON = (function() {
     return t;
 })();
 
-if (typeof module !== 'undefined') module.exports = toGeoJSON;
+export {toGeoJSON};
+
+// if (typeof module !== 'undefined') module.exports = toGeoJSON;
